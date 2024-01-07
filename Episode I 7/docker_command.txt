@@ -1,0 +1,15 @@
+docker run hello-docker
+docker build -t hello-flask .
+docker build -t hello-node .
+docker build -t hello-Java .
+
+docker run -p 8000:8000 hello-python
+docker run -p 5000:5000 hello-flask
+docker run -p 3000:3000 hello-node
+docker run hello-Java
+
+docker ps -a
+
+docker stop <container_id>
+
+docker rm <container_id>

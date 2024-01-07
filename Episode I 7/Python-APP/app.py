@@ -1,13 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/hello', methods=['GET'])
-def hello():
-    name = request.args.get('name')
-    if name is None:
-        name = 'World'
-    return jsonify({'message': 'Hello, {}!'.format(name)})
-
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0')
