@@ -1,0 +1,14 @@
+# build run container 
+
+docker build hello-docker .
+
+docker run hello-docker .
+
+
+
+# make your machine clean py stop and remove container 
+docker ps -a 
+
+docker stop <container_id>
+
+docker rm <container_id>
